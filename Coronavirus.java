@@ -24,4 +24,16 @@ public class Coronavirus{
         return infeccio==mortaldat;
     }
 
+    public void getInfeccio(){
+        return infeccio;
+    }
+    public void getMortaldat(){
+        return mortaldat;
+    }
+    public void setInfeccio(float infeccio){
+        this.infeccio = infeccio;
+    }
+    public void setMortaldat(float mortaldat){
+        this.mortaldat = mortaldat;
+    }
 }
