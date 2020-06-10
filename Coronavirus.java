@@ -36,4 +36,8 @@ public class Coronavirus{
     public void setMortaldat(float mortaldat){
         this.mortaldat = mortaldat;
     }
+
+    public String funcio(){
+        return "";
+    }
 }
