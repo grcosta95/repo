@@ -3,32 +3,31 @@ public class Coronavirus{
     private float mortaldat;
     Coronavirus(float x, float y)
     {
-        infeccio=xx; mortaldat=yy; 
+        infeccio=x; mortaldat=y; 
     }
 
     Coronavirus(){
         //Constructor vuit
     }
 
-    Coronavirus(const Coronavirus& F); // Constructor de còpia
-    Coronavirus::Coronavirus(const Coronavirus$ F) {
-        infeccio = F.infeccion;
+    Coronavirus(Coronavirus F) { //Constructor de copia
+        infeccio = F.infeccio;
         mortaldat = F.mortaldat;
     }
 
     public String toString(){
-        return "infecció = " + infeccio + "mortaldat = " + mortaldat;
+        return "infecciÃ³ = " + infeccio + "mortaldat = " + mortaldat;
     }
 
     public boolean equals(){
         return infeccio==mortaldat;
     }
 
-    public void getInfeccio(){
-        return infeccio;
+    public float getInfeccio(){
+        return this.infeccio;
     }
-    public void getMortaldat(){
-        return mortaldat;
+    public float getMortaldat(){
+        return this.mortaldat;
     }
     public void setInfeccio(float infeccio){
         this.infeccio = infeccio;
@@ -39,5 +38,26 @@ public class Coronavirus{
 
     public String funcio(){
         return "";
+    }
+
+
+
+
+}    
+class Covid19 extends Coronavirus{
+    private float diesDeQuarentena;
+    Covid19(float x, float y, float diesDeQuarentena)
+    {
+    super(x, y);
+    this.diesDeQuarentena = diesDeQuarentena;
+    }
+
+    Covid19(){
+        //Constructor vuit
+    }
+
+    Covid19(Covid19 F) { //Constructor de copia
+        super(F.getInfeccio(), F.getMortaldat());
+        diesDeQuarentena = F.diesDeQuarentena;
     }
 }
